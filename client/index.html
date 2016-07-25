@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+  <title> VR Spotify Music Visualizer </title>
+  <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+</head>
+  <body>
+
+    <a-scene>
+      <!-- Set the sky image -->
+      <a-sky src="lib/images/nights_sky.vr.jpg"></a-sky>
+      <!-- Camera set with nested ring geometry as cursor  -->
+      <a-entity camera id="camera" look-controls wasd-controls position="0 2 0">
+      <!-- View cursor -->
+      <a-entity geometry="primitive: ring; radiusInner: .01; radiusOuter: .02" position="0 0 -1" cursor="type: raycast" ></a-entity>
+      </a-entity>
+
+      <a-entity id="shelf" position="0 0.25 0"></a-entity>
+
+      <!-- The moon -->
+      <a-entity geometry="primitive: sphere; radius: 20" material="src: url(lib/images/textures/moon_surface.png)" position="0 50 -80" rotation="90 0 45"></a-entity>
+
+      <!-- sandy plane -->
+      <a-plane  height="1000" width="1000" rotation="-90 0 0" position="0 0 0" material="src: url(lib/images/textures/sand_texture.png); repeat: 500 500"></a-plane>
+    </a-scene>
+
+    <script src="playlister.js"></script>
+
+  </body>
+</html>
+
