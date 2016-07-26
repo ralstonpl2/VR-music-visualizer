@@ -1,4 +1,4 @@
-angular.module('VRMusicApp', ['ngRoute', 'ngResource'])
+angular.module('VRMusicApp', ['ngRoute', 'ngResource', 'spotify'])
 
   .config(function($routeProvider, $locationProvider){
      $routeProvider
@@ -13,6 +13,10 @@ angular.module('VRMusicApp', ['ngRoute', 'ngResource'])
         .when('/energy', {
           controller: 'MusicController',
           templateUrl: 'views/music-scene-energy.html'
+        })
+        .when('/relax', {
+          controller: 'MusicController',
+          templateUrl: 'views/music-scene-relax.html'
         })
       // $locationProvider.html5Mode(true)
     })

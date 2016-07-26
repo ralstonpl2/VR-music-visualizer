@@ -1,1 +1,3 @@
+<a-entity ng-repeat="track in tracksEnergy" onmouseenter="playSong()" onmouseleave="pauseSong()" position="{{track.posx}} {{track.posy}} {{track.posz}}" look-at="#camera" geometry="primitive: box; width: .8; height: .8; depth: .1" material="src: url( {{track.thumbnail}} )" sound="src: {{track.song}}"></a-entity>
+
 <a-sphere ng-click="home()" position="0 .25 -.5" radius=".25" material="color: tomato; metalness: 0.7"></a-box>

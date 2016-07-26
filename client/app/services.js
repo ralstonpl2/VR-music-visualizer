@@ -5,6 +5,7 @@ angular.module('VRMusicApp')
             var allTracks = [],
                 count = tracks.length;
             for (var i in tracks) {
+                console.log(tracks);
                 var thumbnail = tracks[i].album.images[0].url,
                     posX = (0 + 3 * Math.cos(2 * i * Math.PI / count )),
                     posZ = (0 + 3 * Math.sin(2 * i * Math.PI / count )),
