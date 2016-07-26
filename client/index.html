@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="VRMusicApp">
 <head>
   <title> VR Spotify Music Visualizer </title>
   <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
   <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
+  <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 </head>
   <body>
@@ -17,16 +18,35 @@
       <a-entity geometry="primitive: ring; radiusInner: .01; radiusOuter: .02" position="0 0 -1" cursor="type: raycast" ></a-entity>
       </a-entity>
 
-      <a-entity id="shelf" position="0 0.25 0"></a-entity>
+      <!-- <a-entity id="shelf" position="0 0.25 0"></a-entity> -->
 
       <!-- The moon -->
       <a-entity geometry="primitive: sphere; radius: 20" material="src: url(lib/images/textures/moon_surface.png)" position="0 50 -80" rotation="90 0 45"></a-entity>
+
+      <a-entity ng-view></a-entity>
 
       <!-- sandy plane -->
       <a-plane  height="1000" width="1000" rotation="-90 0 0" position="0 0 0" material="src: url(lib/images/textures/sand_texture.png); repeat: 500 500"></a-plane>
     </a-scene>
 
-    <script src="playlister.js"></script>
+    <!-- <script src="playlister.js"></script> -->
+
+    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="lib/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="lib/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="lib/angular-messages/angular-messages.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="lib/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="lib/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="lib/angular-sanitize/angular-sanitize.js"></script>
+
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/controllers.js"></script>
+    <script type="text/javascript" src="app/services.js"></script>
+    <script type="text/javascript" src="app/listeners.js"></script>
 
   </body>
 </html>
