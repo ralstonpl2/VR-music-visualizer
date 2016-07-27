@@ -16,7 +16,9 @@ app.get('*', function (req, res) {
 //     res.sendFile(path.resolve('index.html'));
 //   })
 
-app.listen(3000, function(){
-    console.log('listening on localhost 3000');
+var port = process.env.PORT || 3000;
+
+app.listen(port, function(){
+    console.log('listening on localhost ' + port);
   });
 
