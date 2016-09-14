@@ -11,13 +11,6 @@ Listen to your favorite Spotify tracks from outer space.
   
 Interstellar VR was built with A-Frame, Angular, JQuery, and Express.
 
-## Development
-
-### Installing Dependencies
-
-
-
-
 ## Local Development
 
 ### Step 1: Install dependencies
